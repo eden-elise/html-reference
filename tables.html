@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="HTML table elements demonstrated">
+            <title>HTML table elements demo</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="text.html">Text</a>
+                <a href="media.html">Media</a>
+                <a href="tables.html">Tables</a>
+                <a href="forms.html">Forms</a>
+                <a href="structure.html">Structure</a>
+                <a href="deprecated.html">Deprecated</a>
+                <a href="experiments.html">Experimental</a>
+            </nav>
+        </header>
+        <main>
+            <h1>HTML table elements demo</h1>
+            <h2>Table 1: HTML Elements</h2>
+            <table>
+                <caption>A reference of HTML elements by category</caption>
+                <colgroup>
+                    <col span="1">
+                    <col span="2">
+                    <col span="3">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" id="cat">Category</th>
+                        <th scope="col" id="elem">Element</th>
+                        <th scope="col" id="desc">Description</th>
+                        <th scope="col" id="type">Block or Inline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td headers="cat">Text</td>
+                    <td headers="elem"><code>&lt;p&gt;</code></td>
+                    <td headers="desc">Paragraph of text</td>
+                    <td headers="type">Block</td>
+                </tr>
+                <tr>
+                    <td headers="cat">Text</td>
+                    <td headers="elem"><code>&lt;em&gt;</code></td>
+                    <td headers="desc">Stress emphasis</td>
+                    <td headers="type">Inline</td>
+                </tr>
+                <tr>
+                    <td headers="cat">Text</td>
+                    <td headers="elem"><code>&lt;strong&gt;</code></td>
+                    <td headers="desc">Strong importance</td>
+                    <td headers="type">Inline</td>
+                </tr>
+                <tr>
+                    <td headers="cat">Structure</td>
+                    <td headers="elem"><code>&lt;section&gt;</code></td>
+                    <td headers="desc">Thematic grouping of content</td>
+                    <td headers="type">Block</td>
+                </tr>
+                <tr>
+                    <td headers="cat">Structure</td>
+                    <td headers="elem"><code>&lt;article&gt;</code></td>
+                    <td headers="desc">Self-contained content</td>
+                    <td headers="type">Block</td>
+                </tr>
+                <tr>
+                    <td headers="cat">Media</td>
+                    <td headers="elem"><code>&lt;img&gt;</code></td>
+                    <td headers="desc">Embeds an image</td>
+                    <td headers="type">Inline</td>
+                </tr>
+                <tr>
+                    <td headers="cat">Media</td>
+                    <td headers="elem"><code>&lt;video&gt;</code></td>
+                    <td headers="desc">Embeds a video player</td>
+                    <td headers="type">Block</td>
+                </tr>
+                <tr>
+                    <td headers="cat">Forms</td>
+                    <td headers="elem"><code>&lt;input&gt;</code></td>
+                    <td headers="desc">Interactive input field</td>
+                    <td headers="type">Inline</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4">Source: Class</td>
+                </tr>
+                </tfoot>
+            </table>
+
+            <h2>Table 2: HTML Page Structure</h2>
+            <p>This table uses colspan and rowspan to show how HTML elements nest within a page.</p>
+
+            <table>
+                <caption>HTML document structure with nested regions</caption>
+                <thead>
+                <tr>
+                    <th scope="col" id="region">Region</th>
+                    <th scope="col" id="element">Element</th>
+                    <th scope="col" id="role">Role</th>
+                    <th scope="col" id="required">Required</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td headers="region" rowspan="2">Head</td>
+                    <td headers="element"><code>&lt;title&gt;</code></td>
+                    <td headers="role">Page title shown in browser tab</td>
+                    <td headers="required">Yes</td>
+                </tr>
+                <tr>
+                    <td headers="element"><code>&lt;meta&gt;</code></td>
+                    <td headers="role">Metadata about the document</td>
+                    <td headers="required">Recommended</td>
+                </tr>
+                <tr>
+                    <td headers="region" rowspan="3">Body</td>
+                    <td headers="element"><code>&lt;header&gt;</code></td>
+                    <td headers="role">Introductory content or nav</td>
+                    <td headers="required">No</td>
+                </tr>
+                <tr>
+                    <td headers="element"><code>&lt;main&gt;</code></td>
+                    <td headers="role">Primary page content</td>
+                    <td headers="required">Recommended</td>
+                </tr>
+                <tr>
+                    <td headers="element"><code>&lt;footer&gt;</code></td>
+                    <td headers="role">Closing content or copyright</td>
+                    <td headers="required">No</td>
+                </tr>
+                <tr>
+                    <td headers="region" colspan="2">Both regions</td>
+                    <td headers="role">Can contain <code>&lt;script&gt;</code></td>
+                    <td headers="required">No</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4">Source: Class</td>
+                </tr>
+                </tfoot>
+            </table>
+        </main>
+        <footer>
+            <p style = "color: hotpink;">&copy; Made by Eden 2026</p>
+        </footer>
+        </body>
+    </html>
