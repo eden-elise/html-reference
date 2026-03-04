@@ -65,6 +65,7 @@
 
         <p><strong> br for line breaks </strong></p>
         <address>
+            <!-- <br> at end not the greatest practice can be done with css so should be used as a fallback -->
             123 Main Street<br>
             San Diego, CA 92101<br>
             <a href="mailto:hello@example.com">hello@example.com</a>
@@ -97,7 +98,37 @@
 
         <p><strong>u — underline, valid for proper nouns in some contexts</strong></p>
         <p>The name <u>Euler</u> appears throughout mathematics.</p>
+    <hr>
+    <h2>Technical</h2>
+        <p><strong>code — inline code snippet</strong></p>
+        <p>In Python, <code>v = [1, 2, 3]</code> represents defines the variable b as a vector.</p>
 
+        <p><strong>kbd — keyboard input</strong></p>
+        <p>To reload the page, press <kbd>Ctrl</kbd> + <kbd>R</kbd>.</p>
+
+        <p><strong>samp — sample program output</strong></p>
+        <p>The terminal returned: <samp>array([1, 0, 0])</samp></p>
+
+        <p><strong>var — mathematical or programming variable</strong></p>
+        <p>Let <var>n</var> be the dimension of the vector space <var>V</var>.</p>
+
+        <p><strong>sub and sup — subscript and superscript</strong></p>
+        <p>Water is H<sub>2</sub>O. The space ℝ<sup>n</sup> has dimension <var>n</var>.</p>
+
+        <p><strong>time — machine-readable date or time</strong></p>
+        <p>The assignment is due <time datetime="2025-03-07">Friday, March 7th</time>.</p>
+
+        <p><strong>data — machine-readable value</strong></p>
+        <p>Current edition: <data value="3">third edition</data>.</p>
+
+        <p><strong>output — result of a calculation, connected to inputs</strong></p>
+        <p>
+            Adjust the scalar:<br> <!-- <br> at end used as a fallback -->
+            <label for="scalar">1-10</label>
+            <input type="range" id="scalar" min="0" max="10" value="5"
+                                               oninput="scalarOutput.value = scalar.value">
+            <output id="scalarOutput" for="scalar">5</output>
+        </p>
     <hr>
 </main>
 <footer>
