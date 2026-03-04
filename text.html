@@ -130,8 +130,51 @@
             <output id="scalarOutput" for="scalar">5</output>
         </p>
     <hr>
+    <h2>Inline Semantics</h2>
+        <p><strong>abbr — abbreviation with expanded title</strong></p>
+        <p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.</p>
+
+        <p><strong>dfn — the defining instance of a term</strong></p>
+        <p>A <dfn>linear map</dfn> is a function that preserves vector addition and scalar multiplication.</p>
+
+        <p><strong>cite — title of a referenced work</strong></p>
+        <p>The proof appears in <cite>Linear Algebra Done Right</cite> by Sheldon Axler.</p>
+
+        <p><strong>q — inline quote</strong></p>
+        <p>Axler writes, <q cite="https://linear.axler.net/">every subspace is a vector space</q>.</p>
+    <hr>
+    <h2>Typographic Oddities</h2>
+
+        <p><strong>wbr — word break opportunity</strong></p>
+        <p>This long term eigen<wbr>decomposition can break after "eigen" on narrow screens.</p>
+
+        <p><strong>bdi — bidirectional isolation</strong></p>
+        <p>Top contributor: <bdi>מרים</bdi> — her name's direction is isolated from surrounding text.</p>
+
+        <p><strong>bdo — bidirectional override</strong></p>
+        <p><bdo dir="rtl">This text is forced right to left</bdo></p>
+
+        <p><strong>ruby, rt, rp — ruby annotation</strong></p>
+        <p>
+            <ruby>漢<rp>(</rp><rt>kan</rt><rp>)</rp></ruby>
+            <ruby>字<rp>(</rp><rt>ji</rt><rp>)</rp></ruby>
+            — shows pronunciation above characters.
+        </p>
+
+        <p><strong>span — generic inline wrapper</strong></p>
+        <p>The word <span style="color: hotpink;">mathematics</span> is wrapped in a span for styling.</p>
+
+    <hr>
+
+    <h2>Deprecated</h2>
+
+    <p><strong>acronym — deprecated, use abbr instead</strong></p>
+    <!-- DEPRECATED: acronym was removed in HTML5, use abbr with title attribute instead -->
+    <p><acronym title="HyperText Markup Language">HTML</acronym> — this is deprecated syntax. Use <abbr title="HyperText Markup Language">HTML</abbr> instead.</p>
+
+    <hr>
 </main>
 <footer>
-
+    <p>&copy; 2025 Eden. All rights reserved.</p>
 </footer>
 </body>
