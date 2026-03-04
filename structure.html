@@ -52,7 +52,7 @@
     </article>
     <hr>
 
-    <h2>Lists</h2>
+    <h2 id="lists">Lists</h2>
 
     <h3>Unordered List</h3>
     <ul>
@@ -87,6 +87,66 @@
         <dt>Aside</dt>
         <dd>Tangential content related to but separate from the main content.</dd>
     </dl>
+
+    <hr>
+
+    <h2 id="interactive">Interactive & Miscellaneous Elements</h2>
+
+    <h3>Details and Summary</h3>
+    <details>
+        <summary>What is a vector space?</summary>
+        <p>A vector space is a set <var>V</var> over a field <var>F</var> with two operations:
+            addition and scalar multiplication, satisfying eight axioms.</p>
+    </details>
+
+    <details>
+        <summary>What is a linear map?</summary>
+        <p>A linear map is a function between two vector spaces that preserves addition
+            and scalar multiplication.</p>
+    </details>
+
+    <h3>Secondary Nav</h3>
+    <nav>
+        <a href="#lists">Lists</a>
+        <a href="#interactive">Interactive</a>
+    </nav>
+
+    <h3>Dialog</h3>
+    <button onclick="document.getElementById('demo-dialog').showModal()">Open Dialog</button>
+    <dialog id="demo-dialog">
+        <h4>This is a dialog</h4>
+        <p>The dialog element creates a modal window. It is hidden until opened with JavaScript.</p>
+        <button onclick="document.getElementById('demo-dialog').close()">Close</button>
+    </dialog>
+
+    <h3>Menu</h3>
+    <menu>
+        <li><button>Bold</button></li>
+        <li><button>Italic</button></li>
+        <li><button>Underline</button></li>
+    </menu>
+
+    <h3>Template</h3>
+    <!-- template content is inert — it does not render until cloned via JavaScript -->
+    <template id="card-template">
+        <div>
+            <h4>Template Card</h4>
+            <p>This content is invisible until activated by JavaScript.</p>
+        </div>
+    </template>
+    <p>There is a hidden <code>&lt;template&gt;</code> above this line. Inspect it in DevTools.</p>
+
+    <h3>Slot</h3>
+    <!-- slot is only meaningful inside Shadow DOM — it has no effect here -->
+    <!-- In Shadow DOM, slot acts as a placeholder for content passed in from outside the component -->
+    <p>The <code>&lt;slot&gt;</code> element is only meaningful inside Shadow DOM and has no visual effect here.</p>
+    <slot></slot>
+
+    <h3>Div</h3>
+    <div>
+        <p>This <code>&lt;div&gt;</code> is a generic block container used here as a last resort
+            when no semantic element fits.</p>
+    </div>
 </main>
 <footer>
     <p>&copy; 2025 Eden. All rights reserved.</p>
