@@ -38,37 +38,65 @@
 
     <h2>Text Structure</h2>
 
-    <p><strong> p for paragraphs</strong></p>
-    <p>The <code>&lt;p&gt;</code> element is the basic unit of prose in HTML.</p>
-    <p>Multiple paragraphs create separation between distinct thoughts.</p>
+        <p><strong> p for paragraphs</strong></p>
+        <p>The <code>&lt;p&gt;</code> element is the basic unit of prose in HTML.</p>
+        <p>Multiple paragraphs create separation between distinct thoughts.</p>
 
-    <p><strong>blockquote for block-level quotes</strong></p>
-    <blockquote cite="https://www.w3.org/TR/html52/">
-        <p>The blockquote element represents content that is quoted from another source.</p>
-    </blockquote>
-    <p>— <cite>W3C HTML Specification</cite></p>
+        <p><strong>blockquote for block-level quotes</strong></p>
+        <blockquote cite="https://www.w3.org/TR/html52/">
+            <p>The blockquote element represents content that is quoted from another source.</p>
+        </blockquote>
+        <p>— <cite>W3C HTML Specification</cite></p>
 
-    <p><strong> q for inline quotes </strong></p>
-    <p>The spec also says <q cite="https://www.w3.org/TR/html52/">the cite attribute may be used to link to the source</q>.</p>
+        <p><strong> q for inline quotes </strong></p>
+        <p>The spec also says <q cite="https://www.w3.org/TR/html52/">the cite attribute may be used to link to the source</q>.</p>
 
-    <p><strong> pre for preformatted text </strong></p>
-    <pre>
-        f(x) = x^2 + 2x + 1
-        g(x) = (x + 1)^2
-        therefore: f(x) = g(x)
-    </pre>
+        <p><strong> pre for preformatted text </strong></p>
+        <pre>
+            f(x) = x^2 + 2x + 1
+            g(x) = (x + 1)^2
+            therefore: f(x) = g(x)
+        </pre>
 
-    <p><strong> hr for a thematic break </strong></p>
-    <p>The section above and below are thematically distinct, separated by an hr:</p>
+        <p><strong> hr for a thematic break </strong></p>
+        <p>The section above and below are thematically distinct, separated by an hr:</p>
+        <hr>
+        <p>New topic begins here.</p>
+
+        <p><strong> br for line breaks </strong></p>
+        <address>
+            123 Main Street<br>
+            San Diego, CA 92101<br>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+        </address>
     <hr>
-    <p>New topic begins here.</p>
+    <h2>Emphasis & Meaning</h2>
+        <p><strong>em — stress emphasis</strong></p>
+        <p>I <em>never</em> said she stole the money.</p>
 
-    <p><strong> br for line breaks </strong></p>
-    <address>
-        123 Main Street<br>
-        San Diego, CA 92101<br>
-        <a href="mailto:hello@example.com">hello@example.com</a>
-    </address>
+        <p><strong>strong — importance</strong></p>
+        <p><strong>Warning:</strong> do not close the browser during submission.</p>
+
+        <p><strong>mark — highlighted/relevant text</strong></p>
+        <p>The most important axiom is <mark>closure under scalar multiplication</mark>.</p>
+
+        <p><strong>small — fine print or side comments</strong></p>
+        <p>Price: $9.99 <small>(excludes tax)</small></p>
+
+        <p><strong>s — no longer accurate</strong></p>
+        <p>The exam is <s>on Friday</s> on Monday.</p>
+
+        <p><strong>del and ins — tracked deletion and insertion</strong></p>
+        <p>The passing grade is <del datetime="2024-01-01">70%</del> <ins datetime="2024-06-01">75%</ins>.</p>
+
+        <p><strong>b — stylistically bold, no semantic importance, not good practice</strong></p>
+        <p>The keywords are <b>array</b>, <b>loop</b>, and <b>function</b>.</p>
+
+        <p><strong>i — stylistically italic, e.g. technical terms, not good practice</strong></p>
+        <p>The term <i>eigenvalue</i> comes from the German <span lang="de">Eigenwert</span>.</p>
+
+        <p><strong>u — underline, valid for proper nouns in some contexts</strong></p>
+        <p>The name <u>Euler</u> appears throughout mathematics.</p>
 
     <hr>
 </main>
