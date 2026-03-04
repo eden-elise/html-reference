@@ -63,3 +63,20 @@ kbd {
     padding: 2px 4px;
     white-space: nowrap;
 }
+article {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+article header h2 {
+    margin-bottom: 0;
+}
+
+article header p {
+    margin-top: 0.2rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+
