@@ -11,13 +11,31 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="favicon.ico">
         <link rel="canonical" href="https://eden-elise.github.io/html-reference/index.html">
-
-
+        <!--
+        <base> would normally go here to set a base URL for all relative links.
+        Example: <base href="https://eden.com/">
+        This is intentionally commented out because I couldn't include it without
+        breaking all relative links on this page (nav, stylesheet, etc.)
+        I tried:
+        <base href="/Users/edentripp/WebstormProjects/html-reference">
+        and
+        <base href="https://eden-elise.github.io/html-reference/">
+        -->
+        <script defer src="main.js"></script>
+        <noscript>
+            <p>This page works best with JavaScript enabled.</p>
+        </noscript>
+        <style>
+            h1 {
+                color: darkslateblue;
+                text-shadow: 0.1rem 0.1rem pink;
+            }
+        </style>
     </head>
-    <body>
+    <body role="document">
         <header>
+            <h1>HTML Kitchen Sink</h1>
             <nav>
-                <a href="index.html">Home</a>
                 <a href="text.html">Text</a>
                 <a href="media.html">Media</a>
                 <a href="tables.html">Tables</a>
@@ -28,10 +46,14 @@
             </nav>
         </header>
         <main>
-
+            <p>Welcome to my html kitchen sink page</p>
+            <p>As said in Arabic, <span lang="ar">مرحبا</span>.</p>
+            <p dir="rtl" lang="ar" title="Welcome to my HTML reference site">
+                مرحباً بكم في موقع مرجع HTML الخاص بي
+            </p>
         </main>
         <footer>
-
+            <p style="color: hotpink;">&copy; 2025 Eden. All rights reserved.</p>
         </footer>
     </body>
 </html>
