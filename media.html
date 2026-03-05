@@ -24,6 +24,34 @@
         <h1>HTML Media Elements — Showcase</h1>
         <p>This page demonstrates every HTML media and embedding element.</p>
 
+        <hr>
+
+        <h2>Images</h2>
+
+        <p><strong>img — basic image</strong></p>
+        <img src="assets/eden-tripp.png" alt="Eden Tripp collage" width="400" height="300">
+
+        <p><strong>figure and figcaption — image with caption</strong></p>
+        <figure>
+            <img src="assets/eden-tripp.png" alt="Eden Tripp collage" width="400" height="300">
+            <figcaption>A personal photo collage used to demonstrate the figure element.</figcaption>
+        </figure>
+
+        <p><strong>picture — responsive image with multiple sources</strong></p>
+        <picture>
+            <source srcset="https://picsum.photos/800/400" media="(min-width: 600px)">
+            <source srcset="https://picsum.photos/400/200" media="(min-width: 300px)">
+            <img src="https://picsum.photos/200/100" alt="A placeholder landscape photo">
+        </picture>
+
+        <p><strong>map and area — clickable image map</strong></p>
+        <img src="assets/eden-tripp.png" alt="Eden Tripp collage" usemap="#photo-map" width="400" height="300">
+        <map name="photo-map">
+            <area shape="rect" coords="0,0,200,150" href="index.html" alt="Top left region">
+            <area shape="rect" coords="200,150,400,300" href="text.html" alt="Bottom right region">
+        </map>
+
+        <hr>
     </main>
     <footer>
         <p style = "color: hotpink;">&copy; Made by Eden 2026</p>
