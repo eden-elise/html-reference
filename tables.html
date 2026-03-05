@@ -101,51 +101,52 @@
             <table>
                 <caption>HTML document structure with nested regions</caption>
                 <thead>
-                <tr>
-                    <th scope="col" id="region">Region</th>
-                    <th scope="col" id="element">Element</th>
-                    <th scope="col" id="role">Role</th>
-                    <th scope="col" id="required">Required</th>
-                </tr>
+                    <tr>
+                        <!-- table headers -->
+                        <th scope="col" id="region">Region</th>
+                        <th scope="col" id="element">Element</th>
+                        <th scope="col" id="role">Role</th>
+                        <th scope="col" id="required">Required</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td headers="region" rowspan="2">Head</td>
-                    <td headers="element"><code>&lt;title&gt;</code></td>
-                    <td headers="role">Page title shown in browser tab</td>
-                    <td headers="required">Yes</td>
-                </tr>
-                <tr>
-                    <td headers="element"><code>&lt;meta&gt;</code></td>
-                    <td headers="role">Metadata about the document</td>
-                    <td headers="required">Recommended</td>
-                </tr>
-                <tr>
-                    <td headers="region" rowspan="3">Body</td>
-                    <td headers="element"><code>&lt;header&gt;</code></td>
-                    <td headers="role">Introductory content or nav</td>
-                    <td headers="required">No</td>
-                </tr>
-                <tr>
-                    <td headers="element"><code>&lt;main&gt;</code></td>
-                    <td headers="role">Primary page content</td>
-                    <td headers="required">Recommended</td>
-                </tr>
-                <tr>
-                    <td headers="element"><code>&lt;footer&gt;</code></td>
-                    <td headers="role">Closing content or copyright</td>
-                    <td headers="required">No</td>
-                </tr>
-                <tr>
-                    <td headers="region" colspan="2">Both regions</td>
-                    <td headers="role">Can contain <code>&lt;script&gt;</code></td>
-                    <td headers="required">No</td>
-                </tr>
+                    <tr>
+                        <td headers="region" rowspan="2">Head</td>
+                        <td headers="element"><code>&lt;title&gt;</code></td>
+                        <td headers="role">Page title shown in browser tab</td>
+                        <td headers="required">Yes</td>
+                    </tr>
+                    <tr>
+                        <td headers="element"><code>&lt;meta&gt;</code></td>
+                        <td headers="role">Metadata about the document</td>
+                        <td headers="required">Recommended</td>
+                    </tr>
+                    <tr>
+                        <td headers="region" rowspan="3">Body</td>
+                        <td headers="element"><code>&lt;header&gt;</code></td>
+                        <td headers="role">Introductory content or nav</td>
+                        <td headers="required">No</td>
+                    </tr>
+                    <tr>
+                        <td headers="element"><code>&lt;main&gt;</code></td>
+                        <td headers="role">Primary page content</td>
+                        <td headers="required">Recommended</td>
+                    </tr>
+                    <tr>
+                        <td headers="element"><code>&lt;footer&gt;</code></td>
+                        <td headers="role">Closing content or copyright</td>
+                        <td headers="required">No</td>
+                    </tr>
+                    <tr>
+                        <td headers="region" colspan="2">Both regions</td>
+                        <td headers="role">Can contain <code>&lt;script&gt;</code></td>
+                        <td headers="required">No</td>
+                    </tr>
                 </tbody>
                 <tfoot>
-                <tr>
-                    <td colspan="4">Source: Class</td>
-                </tr>
+                    <tr>
+                        <td colspan="4">Source: Class</td>
+                    </tr>
                 </tfoot>
             </table>
         </main>
