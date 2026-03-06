@@ -29,19 +29,19 @@
         <h2>Images</h2>
 
         <p><strong>img — basic image</strong></p>
-        <img src="assets/eden-tripp.png" alt="Eden Tripp collage" width="400" height="300">
+        <img src="assets/tica.jpg" alt="Cat photo" width="400" height="300">
 
         <p><strong>figure and figcaption — image with caption</strong></p>
         <figure>
-            <img src="assets/eden-tripp.png" alt="Eden Tripp collage" width="400" height="300">
-            <figcaption>A personal photo collage used to demonstrate the figure element.</figcaption>
+            <img src="assets/plane.jpg" alt="Photo of a plane" width="400" height="300">
+            <figcaption>A plane photo used to demonstrate the figure and figcaption elements.</figcaption>
         </figure>
 
-        <p><strong>picture — responsive image with multiple sources</strong></p>
+        <p><strong>picture — serve modern formats with fallback</strong></p>
         <picture>
-            <source srcset="https://picsum.photos/800/400" media="(min-width: 600px)">
-            <source srcset="https://picsum.photos/400/200" media="(min-width: 300px)">
-            <img src="https://picsum.photos/200/100" alt="A placeholder landscape photo">
+            <source srcset="assets/me.jpg" type="image/webp">
+            <source srcset="assets/me.jpg" type="image/jpeg">
+            <img src="assets/me.jpg" alt="Personal photo, served in the best format the browser supports">
         </picture>
 
         <p><strong>map and area — clickable image map</strong></p>
