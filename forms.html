@@ -25,7 +25,75 @@
     <p>Every HTML form element and input type demonstrated in context.</p>
 
     <form action="#" method="post" enctype="multipart/form-data" novalidate>
+        <fieldset>
+            <legend>Text Inputs</legend>
 
+            <p><strong>text</strong></p>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required minlength="3">
+
+            <p><strong>email</strong></p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+
+            <p><strong>password</strong></p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="new-password">
+
+            <p><strong>search</strong></p>
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search" placeholder="Search...">
+
+            <p><strong>tel</strong></p>
+            <label for="tel">Phone</label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+
+            <p><strong>url</strong></p>
+            <label for="url">Website</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com">
+
+            <p><strong>textarea</strong></p>
+            <label for="bio">Bio</label>
+            <textarea id="bio" name="bio" rows="4" cols="40" maxlength="300">Write something here...</textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Number & Range Inputs</legend>
+
+            <p><strong>number</strong></p>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="0" max="120" step="1">
+
+            <p><strong>range — connected to output</strong></p>
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" step="1"
+                   oninput="volumeOutput.value = volume.value">
+            <output id="volumeOutput" for="volume">50</output>
+
+            <p><strong>date</strong></p>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+
+            <p><strong>time</strong></p>
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time">
+
+            <p><strong>datetime-local</strong></p>
+            <label for="datetime">Date and Time</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+
+            <p><strong>month</strong></p>
+            <label for="month">Month</label>
+            <input type="month" id="month" name="month">
+
+            <p><strong>week</strong></p>
+            <label for="week">Week</label>
+            <input type="week" id="week" name="week">
+
+            <p><strong>color</strong></p>
+            <label for="color">Favorite Color</label>
+            <input type="color" id="color" name="color">
+
+        </fieldset>
     </form>
 
 </main>
