@@ -50,6 +50,70 @@
             <area shape="rect" coords="0,0,200,150" href="index.html" alt="Top left region">
             <area shape="rect" coords="200,150,400,300" href="text.html" alt="Bottom right region">
         </map>
+        <hr>
+        <h2>Audio</h2>
+
+        <p><strong>audio — embedded audio player</strong></p>
+        <audio controls loop muted>
+            <source src="assets/audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <hr>
+
+        <h2>Video</h2>
+
+        <p><strong>video — embedded video player with captions</strong></p>
+        <video controls width="400" poster="assets/planetwo.jpg">
+            <source src="assets/video.mp4" type="video/mp4">
+            <track src="assets/captions.vtt" kind="captions" srclang="en" label="English">
+            Your browser does not support the video element.
+        </video>
+
+        <hr>
+
+        <h2>Embedding</h2>
+
+        <p><strong>iframe — embed external content</strong></p>
+        <iframe width="400" height="225"
+                src="https://www.youtube.com/embed/XkcNhVQ-cjo"
+                title="YouTube video"
+                allowfullscreen>
+        </iframe>
+
+        <p><strong>embed — embed external resource</strong></p>
+        <embed src="assets/2628488ProblemA.pdf" type="application/pdf" width="400" height="500">
+
+        <p><strong>object and param — embed with parameters</strong></p>
+        <object data="assets/2628488ProblemA.pdf" type="application/pdf" width="400" height="500">
+            <!-- param is obsolete in HTML5 — the validator flags it.
+                 The data attribute on object replaces its function.
+                 Included here for demonstration purposes only. -->
+            <param name="src" value="assets/2628488ProblemA.pdf">
+            <p>Your browser cannot display this PDF. <a href="assets/2628488ProblemA.pdf">Download it instead.</a></p>
+        </object>
+        <hr>
+
+        <h2>Canvas & SVG</h2>
+
+        <p><strong>canvas — drawn with JavaScript</strong></p>
+        <canvas id="demo-canvas" width="300" height="150"
+                style="border: 1px solid #ccc;">
+        </canvas>
+        <script>
+            const canvas = document.getElementById('demo-canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'hotpink';
+            ctx.fillRect(20, 20, 100, 80);
+            ctx.fillStyle = 'darkslateblue';
+            ctx.fillRect(140, 40, 80, 80);
+        </script>
+
+        <p><strong>svg — inline scalable vector graphic</strong></p>
+        <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="hotpink"/>
+            <rect x="110" y="10" width="80" height="80" fill="darkslateblue"/>
+        </svg>
 
         <hr>
     </main>
