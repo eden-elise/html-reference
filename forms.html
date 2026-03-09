@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A showcase of every HTML form element and input type.">
+    <meta name="description" content="A playlist builder form demonstrating every HTML form element.">
     <title>Forms — HTML Kitchen Sink</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,183 +21,218 @@
     </nav>
 </header>
 <main>
-    <h1>The Big Odd Form</h1>
-    <p>Every HTML form element and input type demonstrated in context.</p>
+
+    <h1>🎵 Playlist Builder</h1>
+    <p>Build and submit your perfect study playlist. </p>
 
     <form action="#" method="post" enctype="multipart/form-data" novalidate>
+
         <fieldset>
-            <legend>Text Inputs</legend>
+            <legend>Your Account</legend>
 
-            <p><strong>text and autofocus</strong></p>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter username" required minlength="3" autofocus>
+            <p><strong>Username</strong></p>
+            <label for="username">Display Name</label>
+            <input type="text" id="username" name="username"
+                   placeholder="e.g. lo_fi_eden" required minlength="3" autofocus>
 
-            <p><strong>email</strong></p>
+            <p><strong>Email</strong></p>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com">
+            <input type="email" id="email" name="email"
+                   placeholder="you@example.com">
 
-            <p><strong>password</strong></p>
+            <p><strong>Password</strong></p>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" autocomplete="new-password">
+            <input type="password" id="password" name="password"
+                   autocomplete="new-password">
 
-            <p><strong>search</strong></p>
+            <p><strong>Search for a song or artist</strong></p>
             <label for="search">Search</label>
-            <input type="search" id="search" name="search" placeholder="Search...">
+            <input type="search" id="search" name="search"
+                   placeholder="e.g. Nils Frahm">
 
-            <p><strong>tel</strong></p>
+            <p><strong>Phone for notifications</strong></p>
             <label for="tel">Phone</label>
-            <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+            <input type="tel" id="tel" name="tel"
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                   placeholder="123-456-7890">
 
-            <p><strong>url</strong></p>
+            <p><strong>Your music blog or website</strong></p>
             <label for="url">Website</label>
-            <input type="url" id="url" name="url" placeholder="https://example.com">
+            <input type="url" id="url" name="url"
+                   placeholder="https://yoursite.com">
 
-            <p><strong>textarea</strong></p>
+            <p><strong>Tell us about your music taste</strong></p>
             <label for="bio">Bio</label>
-            <textarea id="bio" name="bio" rows="4" cols="40" maxlength="300">Write something here...</textarea>
+            <textarea id="bio" name="bio" rows="4" cols="40"
+                      maxlength="300">I listen to...</textarea>
+
         </fieldset>
+
         <fieldset>
-            <legend>Number & Range Inputs</legend>
+            <legend>Playlist Settings</legend>
 
-            <p><strong>number</strong></p>
-            <label for="age">Age</label>
-            <input type="number" id="age" name="age" min="0" max="120" step="1">
+            <p><strong>How many songs in your playlist?</strong></p>
+            <label for="songcount">Song Count</label>
+            <input type="number" id="songcount" name="songcount"
+                   min="1" max="100" step="1">
 
-            <p><strong>range — connected to output</strong></p>
-            <label for="volume">Volume</label>
-            <input type="range" id="volume" name="volume" min="0" max="100" step="1"
-                   oninput="volumeOutput.value = volume.value">
-            <output id="volumeOutput" for="volume">50</output>
+            <p><strong>Mood intensity</strong></p>
+            <label for="intensity">Intensity</label>
+            <input type="range" id="intensity" name="intensity"
+                   min="0" max="100" step="1"
+                   oninput="intensityOutput.value = intensity.value">
+            <output id="intensityOutput" for="intensity">50</output>
 
-            <p><strong>date</strong></p>
-            <label for="date">Date</label>
+            <p><strong>Date this playlist was created</strong></p>
+            <label for="date">Created On</label>
             <input type="date" id="date" name="date">
 
-            <p><strong>time</strong></p>
-            <label for="time">Time</label>
+            <p><strong>Best time of day to listen</strong></p>
+            <label for="time">Best Listening Time</label>
             <input type="time" id="time" name="time">
 
-            <p><strong>datetime-local</strong></p>
-            <label for="datetime">Date and Time</label>
+            <p><strong>Schedule a listening session</strong></p>
+            <label for="datetime">Listening Session</label>
             <input type="datetime-local" id="datetime" name="datetime">
 
-            <p><strong>month</strong></p>
-            <label for="month">Month</label>
+            <p><strong>Month you discovered this genre</strong></p>
+            <label for="month">Discovery Month</label>
             <input type="month" id="month" name="month">
 
-            <p><strong>week</strong></p>
-            <label for="week">Week</label>
+            <p><strong>Week to feature this playlist</strong></p>
+            <label for="week">Feature Week</label>
             <input type="week" id="week" name="week">
 
-            <p><strong>color</strong></p>
-            <label for="color">Favorite Color</label>
+            <p><strong>Playlist cover color</strong></p>
+            <label for="color">Cover Color</label>
             <input type="color" id="color" name="color">
 
         </fieldset>
+
         <fieldset>
-            <legend>Choice Inputs</legend>
+            <legend>Music Preferences</legend>
 
-            <p><strong>checkbox</strong></p>
-            <label><input type="checkbox" name="topics" value="html" checked> HTML</label>
-            <label><input type="checkbox" name="topics" value="css"> CSS</label>
-            <label><input type="checkbox" name="topics" value="js"> JavaScript</label>
+            <p><strong>What are you using this playlist for?</strong></p>
+            <label><input type="checkbox" name="use" value="studying" checked> Studying</label>
+            <label><input type="checkbox" name="use" value="working"> Working</label>
+            <label><input type="checkbox" name="use" value="sleeping"> Falling asleep</label>
+            <label><input type="checkbox" name="use" value="commuting"> Commuting</label>
 
-            <p><strong>radio</strong></p>
-            <label><input type="radio" name="level" value="beginner"> Beginner</label>
-            <label><input type="radio" name="level" value="intermediate"> Intermediate</label>
-            <label><input type="radio" name="level" value="advanced"> Advanced</label>
+            <p><strong>Playlist vibe</strong></p>
+            <label><input type="radio" name="vibe" value="chill"> Chill</label>
+            <label><input type="radio" name="vibe" value="focus"> Focus</label>
+            <label><input type="radio" name="vibe" value="hype"> Hype</label>
+            <label><input type="radio" name="vibe" value="sad"> Sad girl hours</label>
 
-            <p><strong>select with optgroup</strong></p>
-            <label for="language">Favorite Language</label>
-            <select id="language" name="language">
-                <optgroup label="Systems">
-                    <option value="c">C</option>
-                    <option value="rust">Rust</option>
+            <p><strong>Primary genre</strong></p>
+            <label for="genre">Genre</label>
+            <select id="genre" name="genre">
+                <optgroup label="Ambient">
+                    <option value="lofi" selected>Lo-fi</option>
+                    <option value="ambient">Ambient</option>
                 </optgroup>
-                <optgroup label="Scripting">
-                    <option value="python" selected>Python</option>
-                    <option value="js">JavaScript</option>
+                <optgroup label="Electronic">
+                    <option value="chillhop">Chillhop</option>
+                    <option value="deephouse">Deep House</option>
+                </optgroup>
+                <optgroup label="Classical">
+                    <option value="neoclassical">Neoclassical</option>
+                    <option value="piano">Solo Piano</option>
                 </optgroup>
             </select>
 
-            <p><strong>datalist — suggested options for a text input</strong></p>
-            <label for="course">Course</label>
-            <input type="text" id="course" name="course" list="courses" placeholder="Type a course...">
-            <datalist id="courses">
-                <option value="COMP 310">
-                <option value="MATH 494">
-                <option value="COMP 494">
-                <option value="MATH 380">
+            <p><strong>Type or pick a favorite artist</strong></p>
+            <label for="artist">Favorite Artist</label>
+            <input type="text" id="artist" name="artist"
+                   list="artist-suggestions" placeholder="Type an artist...">
+            <datalist id="artist-suggestions">
+                <option value="Nils Frahm">
+                <option value="Satie">
+                <option value="Idealism">
+                <option value="Lofi Girl">
+                <option value="Brian Eno">
             </datalist>
+
         </fieldset>
+
         <fieldset>
-            <legend>Misc Inputs</legend>
+            <legend>Upload & Hidden</legend>
 
-            <p><strong>file</strong></p>
-            <label for="upload">Upload Files</label>
-            <input type="file" id="upload" name="upload" accept=".jpg,.png,.pdf" multiple>
+            <p><strong>Upload a cover image for your playlist</strong></p>
+            <label for="upload">Cover Image</label>
+            <input type="file" id="upload" name="upload"
+                   accept=".jpg,.png" multiple>
 
-            <p><strong>hidden</strong></p>
-            <!-- hidden inputs are not visible to the eye but get submitted with the form -->
-            <input type="hidden" name="page-id" value="forms-demo">
+            <!-- hidden field tracking form source -->
+            <input type="hidden" name="form-source" value="playlist-builder">
 
-            <p><strong>image — graphical submit button</strong></p>
-            <label>Submit with image button:</label>
-            <input type="image" src="assets/eden-tripp.png" alt="Submit" width="100" height="60">
+            <p><strong>Submit with an image button</strong></p>
+            <label>Quick submit:</label>
+            <input type="image" src="assets/eden-tripp.png"
+                   alt="Submit playlist" width="100" height="60">
 
         </fieldset>
+
         <fieldset>
-            <legend>Meter & Progress</legend>
+            <legend>Playlist Stats</legend>
 
-            <p><strong>meter — scalar measurement within a range</strong></p>
-            <label for="score">Quiz Score</label>
-            <meter id="score" min="0" max="100" value="72" low="50" high="85" optimum="100">72%</meter>
+            <p><strong>How complete is your playlist?</strong></p>
+            <label for="completeness">Completeness</label>
+            <meter id="completeness" min="0" max="100"
+                   value="68" low="30" high="80" optimum="100">68%</meter>
 
-            <p><strong>progress — with value</strong></p>
-            <label>Assignment completion:</label>
-            <progress value="6" max="8">6/8 pages</progress>
+            <p><strong>Songs added so far</strong></p>
+            <label>Progress:</label>
+            <progress value="14" max="20">14/20 songs</progress>
 
-            <p><strong>progress — indeterminate (no value)</strong></p>
-            <label>Loading:</label>
-            <progress>Loading...</progress>
+            <p><strong>Saving your playlist</strong></p>
+            <label>Saving:</label>
+            <progress>Saving...</progress>
 
         </fieldset>
+
         <fieldset>
-            <legend>Attribute Demos</legend>
+            <legend>Account Restrictions</legend>
 
-            <p><strong>disabled </strong></p>
-            <label for="disabled">This field is disabled:</label>
-            <input type="text" id="disabled" name="focused" disabled>
+            <p><strong>Your assigned listener ID — cannot be changed</strong></p>
+            <label for="listenerid">Listener ID</label>
+            <input type="text" id="listenerid" name="listenerid"
+                   value="LISTENER-00042" readonly>
 
-            <p><strong>readonly</strong></p>
-            <label for="readonly">Readonly field:</label>
-            <input type="text" id="readonly" name="readonly" value="Cannot be edited" readonly>
+            <p><strong>Premium features — not available on your plan</strong></p>
+            <label for="premium">Premium Code</label>
+            <input type="text" id="premium" name="premium"
+                   placeholder="Upgrade to unlock" disabled>
 
-            <p><strong>tabindex</strong></p>
-            <label for="tab1">Tab order 1:</label>
-            <input type="text" id="tab1" name="tab1" tabindex="1">
-            <label for="tab2">Tab order 2:</label>
-            <input type="text" id="tab2" name="tab2" tabindex="2">
+            <p><strong>Tab through in order</strong></p>
+            <label for="tab1">First song title:</label>
+            <input type="text" id="tab1" name="tab1" tabindex="1"
+                   placeholder="Song one">
+            <label for="tab2">Second song title:</label>
+            <input type="text" id="tab2" name="tab2" tabindex="2"
+                   placeholder="Song two">
 
-            <p><strong>autocomplete</strong></p>
-            <label for="fullname">Full Name (autocomplete on):</label>
-            <input type="text" id="fullname" name="fullname" autocomplete="name">
+            <p><strong>Your name for autocomplete</strong></p>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname"
+                   autocomplete="name" placeholder="Your name">
 
         </fieldset>
+
         <fieldset>
-            <legend>Buttons</legend>
+            <legend>Submit Your Playlist</legend>
 
-            <p><strong>input type submit, reset, button</strong></p>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-            <input type="button" value="Click Me">
+            <input type="submit" value="Save Playlist">
+            <input type="reset" value="Clear Everything">
+            <input type="button" value="Preview">
 
-            <p><strong>button element — all three types</strong></p>
-            <button type="submit">Submit Button</button>
-            <button type="reset">Reset Button</button>
-            <button type="button">Regular Button</button>
+            <p><strong>Or use the button element:</strong></p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Preview</button>
 
         </fieldset>
+
     </form>
 
 </main>
