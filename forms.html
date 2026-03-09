@@ -94,6 +94,42 @@
             <input type="color" id="color" name="color">
 
         </fieldset>
+        <fieldset>
+            <legend>Choice Inputs</legend>
+
+            <p><strong>checkbox</strong></p>
+            <label><input type="checkbox" name="topics" value="html" checked> HTML</label>
+            <label><input type="checkbox" name="topics" value="css"> CSS</label>
+            <label><input type="checkbox" name="topics" value="js"> JavaScript</label>
+
+            <p><strong>radio</strong></p>
+            <label><input type="radio" name="level" value="beginner"> Beginner</label>
+            <label><input type="radio" name="level" value="intermediate"> Intermediate</label>
+            <label><input type="radio" name="level" value="advanced"> Advanced</label>
+
+            <p><strong>select with optgroup</strong></p>
+            <label for="language">Favorite Language</label>
+            <select id="language" name="language">
+                <optgroup label="Systems">
+                    <option value="c">C</option>
+                    <option value="rust">Rust</option>
+                </optgroup>
+                <optgroup label="Scripting">
+                    <option value="python" selected>Python</option>
+                    <option value="js">JavaScript</option>
+                </optgroup>
+            </select>
+
+            <p><strong>datalist — suggested options for a text input</strong></p>
+            <label for="course">Course</label>
+            <input type="text" id="course" name="course" list="courses" placeholder="Type a course...">
+            <datalist id="courses">
+                <option value="COMP 310">
+                <option value="MATH 494">
+                <option value="COMP 494">
+                <option value="MATH 380">
+            </datalist>
+        </fieldset>
     </form>
 
 </main>
