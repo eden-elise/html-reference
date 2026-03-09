@@ -21,16 +21,16 @@
     </nav>
 </header>
 <main>
-    <h1>HTML Forms — Showcase</h1>
+    <h1>The Big Odd Form</h1>
     <p>Every HTML form element and input type demonstrated in context.</p>
 
     <form action="#" method="post" enctype="multipart/form-data" novalidate>
         <fieldset>
             <legend>Text Inputs</legend>
 
-            <p><strong>text</strong></p>
+            <p><strong>text and autofocus</strong></p>
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter username" required minlength="3">
+            <input type="text" id="username" name="username" placeholder="Enter username" required minlength="3" autofocus>
 
             <p><strong>email</strong></p>
             <label for="email">Email</label>
@@ -129,6 +129,74 @@
                 <option value="COMP 494">
                 <option value="MATH 380">
             </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Misc Inputs</legend>
+
+            <p><strong>file</strong></p>
+            <label for="upload">Upload Files</label>
+            <input type="file" id="upload" name="upload" accept=".jpg,.png,.pdf" multiple>
+
+            <p><strong>hidden</strong></p>
+            <!-- hidden inputs are not visible to the eye but get submitted with the form -->
+            <input type="hidden" name="page-id" value="forms-demo">
+
+            <p><strong>image — graphical submit button</strong></p>
+            <label>Submit with image button:</label>
+            <input type="image" src="assets/eden-tripp.png" alt="Submit" width="100" height="60">
+
+        </fieldset>
+        <fieldset>
+            <legend>Meter & Progress</legend>
+
+            <p><strong>meter — scalar measurement within a range</strong></p>
+            <label for="score">Quiz Score</label>
+            <meter id="score" min="0" max="100" value="72" low="50" high="85" optimum="100">72%</meter>
+
+            <p><strong>progress — with value</strong></p>
+            <label>Assignment completion:</label>
+            <progress value="6" max="8">6/8 pages</progress>
+
+            <p><strong>progress — indeterminate (no value)</strong></p>
+            <label>Loading:</label>
+            <progress>Loading...</progress>
+
+        </fieldset>
+        <fieldset>
+            <legend>Attribute Demos</legend>
+
+            <p><strong>disabled </strong></p>
+            <label for="disabled">This field is disabled:</label>
+            <input type="text" id="disabled" name="focused" disabled>
+
+            <p><strong>readonly</strong></p>
+            <label for="readonly">Readonly field:</label>
+            <input type="text" id="readonly" name="readonly" value="Cannot be edited" readonly>
+
+            <p><strong>tabindex</strong></p>
+            <label for="tab1">Tab order 1:</label>
+            <input type="text" id="tab1" name="tab1" tabindex="1">
+            <label for="tab2">Tab order 2:</label>
+            <input type="text" id="tab2" name="tab2" tabindex="2">
+
+            <p><strong>autocomplete</strong></p>
+            <label for="fullname">Full Name (autocomplete on):</label>
+            <input type="text" id="fullname" name="fullname" autocomplete="name">
+
+        </fieldset>
+        <fieldset>
+            <legend>Buttons</legend>
+
+            <p><strong>input type submit, reset, button</strong></p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" value="Click Me">
+
+            <p><strong>button element — all three types</strong></p>
+            <button type="submit">Submit Button</button>
+            <button type="reset">Reset Button</button>
+            <button type="button">Regular Button</button>
+
         </fieldset>
     </form>
 
