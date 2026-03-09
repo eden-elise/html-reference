@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A showcase of HTML text and inline text elements.">
-    <title>HTML Text and Inline Text Elements</title>
+    <meta name="description" content="Linear algebra study notes demonstrating HTML text and inline semantic elements.">
+    <title>Text & Inline Semantics — HTML Kitchen Sink</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,161 +21,234 @@
     </nav>
 </header>
 <main>
-    <h1>HTML Text Elements — Showcase</h1>
-    <p>This page demonstrates every HTML text and inline semantic element in context.</p>
+
+    <h1>Linear Algebra Study Notes</h1>
+    <p>
+        These are personal study notes for <abbr title="Linear Algebra">LA</abbr>
+        based on <cite>Linear Algebra Done Right</cite> by Sheldon Axler. They cover
+        core definitions, key theorems, and computational examples from
+        <abbr title="University of San Diego">USD</abbr> coursework.
+        Last updated <time datetime="2025-03-07">March 7, 2025</time>.
+    </p>
 
     <hr>
 
-    <h2>Headings</h2>
-    <h1>h1 — Page Title</h1>
-    <h2>h2 — Section</h2>
-    <h3>h3 — Subsection</h3>
-    <h4>h4 — Sub-subsection</h4>
-    <h5>h5 — Minor heading</h5>
-    <h6>h6 — Smallest heading</h6>
+    <h2>Chapter 1: Vector Spaces</h2>
+
+    <h3>1.1 Definition</h3>
+
+    <p>
+        A <dfn>vector space</dfn> is a set <var>V</var> over a field <var>F</var>
+        together with two operations — addition and scalar multiplication — satisfying
+        eight axioms. The field <var>F</var> is typically
+        <abbr title="the set of all real numbers">ℝ</abbr> or
+        <abbr title="the set of all complex numbers">ℂ</abbr>.
+    </p>
+
+    <p>
+        The dimension of a vector space is written dim<sub>F</sub>(<var>V</var>).
+        For example, ℝ<sup>n</sup> has dimension <var>n</var> over ℝ. The zero
+        vector space has dimension zero — a degenerate case worth remembering.
+    </p>
+
+    <blockquote cite="https://linear.axler.net/">
+        <p>The definition of a vector space is the foundation upon which all of
+            linear algebra is built. Understanding it deeply is more valuable than
+            memorizing theorems.</p>
+    </blockquote>
+    <p>— <cite>Linear Algebra Done Right</cite>, Sheldon Axler</p>
+
+    <p>
+        As Axler notes, <q cite="https://linear.axler.net/">a list of length zero
+        is a basis of the zero vector space</q> — easy to forget on exams.
+    </p>
+
+    <h4>1.1.1 The Eight Axioms</h4>
+
+    <p>
+        For all <var>u</var>, <var>v</var>, <var>w</var> ∈ <var>V</var> and
+        scalars <var>a</var>, <var>b</var> ∈ <var>F</var>:
+    </p>
+
+    <pre>
+1. u + v = v + u                        (commutativity)
+2. (u + v) + w = u + (v + w)            (associativity)
+3. ∃ 0 ∈ V such that v + 0 = v          (additive identity)
+4. ∃ −v such that v + (−v) = 0          (additive inverse)
+5. 1v = v                               (multiplicative identity)
+6. (ab)v = a(bv)                        (multiplicative associativity)
+7. a(u + v) = au + av                   (distributivity)
+8. (a + b)v = av + bv                   (distributivity)
+  </pre>
+
+    <h5>Note on Notation</h5>
+    <p>
+        The symbol <b>𝔽</b> is used throughout Axler as a generic field standing
+        for either ℝ or ℂ. The term <i>scalar</i> always refers to an element of
+        the field, <em>not</em> an element of the vector space itself — this
+        distinction matters when working over ℂ.
+    </p>
+
+    <h6>Historical Remark</h6>
+    <p>
+        The formal definition of a vector space was established around
+        <time datetime="1888">1888</time> by Giuseppe Peano.
+        <small>This predates the modern axiomatic treatment by several decades.</small>
+    </p>
 
     <hr>
 
-    <h2>Text Structure</h2>
+    <h2>Chapter 2: Linear Maps</h2>
 
-        <p><strong> p for paragraphs</strong></p>
-        <p>The <code>&lt;p&gt;</code> element is the basic unit of prose in HTML.</p>
-        <p>Multiple paragraphs create separation between distinct thoughts.</p>
+    <h3>2.1 Definition and Examples</h3>
 
-        <p><strong>blockquote for block-level quotes</strong></p>
-        <blockquote cite="https://www.w3.org/TR/html52/">
-            <p>The blockquote element represents content that is quoted from another source.</p>
-        </blockquote>
-        <p>— <cite>W3C HTML Specification</cite></p>
+    <p>
+        A <dfn>linear map</dfn> is a function <var>T</var> : <var>V</var> →
+        <var>W</var> satisfying additivity and homogeneity.
+        <strong>Both conditions must hold</strong> — forgetting to check scalar
+        multiplication over ℂ is a recurring exam mistake.
+    </p>
 
-        <p><strong> q for inline quotes </strong></p>
-        <p>The spec also says <q cite="https://www.w3.org/TR/html52/">the cite attribute may be used to link to the source</q>.</p>
+    <p>
+        The key insight is that <mark>a linear map is completely determined by
+        its values on a basis</mark>. Once you know where the basis vectors go,
+        the entire map is fixed.
+    </p>
 
-        <p><strong> pre for preformatted text </strong></p>
-        <pre>
-            f(x) = x^2 + 2x + 1
-            g(x) = (x + 1)^2
-            therefore: f(x) = g(x)
-        </pre>
+    <h3>2.2 Corrected Definition (Quiz 3 Revision)</h3>
 
-        <p><strong> hr for a thematic break </strong></p>
-        <p>The section above and below are thematically distinct, separated by an hr:</p>
-        <hr>
-        <p>New topic begins here.</p>
+    <p>
+        My original notes stated that <del datetime="2025-02-01">every linear map
+        between finite-dimensional spaces can be represented as a square matrix</del>.
+        This is wrong — the correct statement is
+        <ins datetime="2025-02-15">a linear map T : V → W is represented by an
+            m × n matrix where m = dim W and n = dim V, which is square only when
+            dim V = dim W</ins>.
+    </p>
 
-        <p><strong> br for line breaks </strong></p>
-        <address>
-            <!-- <br> at end not the greatest practice can be done with css so should be used as a fallback -->
-            123 Main Street<br>
-            San Diego, CA 92101<br>
-            <a href="mailto:hello@example.com">hello@example.com</a>
-        </address>
-    <hr>
-    <h2>Emphasis & Meaning</h2>
-        <p><strong>em — stress emphasis</strong></p>
-        <p>I <em>never</em> said she stole the money.</p>
-
-        <p><strong>strong — importance</strong></p>
-        <p><strong>Warning:</strong> do not close the browser during submission.</p>
-
-        <p><strong>mark — highlighted/relevant text</strong></p>
-        <p>The most important axiom is <mark>closure under scalar multiplication</mark>.</p>
-
-        <p><strong>small — fine print or side comments</strong></p>
-        <p>Price: $9.99 <small>(excludes tax)</small></p>
-
-        <p><strong>s — no longer accurate</strong></p>
-        <p>The exam is <s>on Friday</s> on Monday.</p>
-
-        <p><strong>del and ins — tracked deletion and insertion</strong></p>
-        <p>The passing grade is <del datetime="2024-01-01">70%</del> <ins datetime="2024-06-01">75%</ins>.</p>
-
-        <p><strong>b — stylistically bold, no semantic importance, not good practice</strong></p>
-        <p>The keywords are <b>array</b>, <b>loop</b>, and <b>function</b>.</p>
-
-        <p><strong>i — stylistically italic, e.g. technical terms, not good practice</strong></p>
-        <p>The term <i>eigenvalue</i> comes from the German <span lang="de">Eigenwert</span>.</p>
-
-        <p><strong>u — underline, valid for proper nouns in some contexts</strong></p>
-        <p>The name <u>Euler</u> appears throughout mathematics.</p>
-    <hr>
-    <h2>Technical</h2>
-        <p><strong>code — inline code snippet</strong></p>
-        <p>In Python, <code>v = [1, 2, 3]</code> represents defines the variable b as a vector.</p>
-
-        <p><strong>kbd — keyboard input</strong></p>
-        <p>To reload the page, press <kbd>Ctrl</kbd> + <kbd>R</kbd>.</p>
-
-        <p><strong>samp — sample program output</strong></p>
-        <p>The terminal returned: <samp>array([1, 0, 0])</samp></p>
-
-        <p><strong>var — mathematical or programming variable</strong></p>
-        <p>Let <var>n</var> be the dimension of the vector space <var>V</var>.</p>
-
-        <p><strong>sub and sup — subscript and superscript</strong></p>
-        <p>Water is H<sub>2</sub>O. The space ℝ<sup>n</sup> has dimension <var>n</var>.</p>
-
-        <p><strong>time — machine-readable date or time</strong></p>
-        <p>The assignment is due <time datetime="2025-03-07">Friday, March 7th</time>.</p>
-
-        <p><strong>data — machine-readable value</strong></p>
-        <p>Current edition: <data value="3">third edition</data>.</p>
-
-        <p><strong>output — result of a calculation, connected to inputs</strong></p>
-        <p>
-            Adjust the scalar:<br> <!-- <br> at end used as a fallback -->
-            <label for="scalar">1-10</label>
-            <input type="range" id="scalar" min="0" max="10" value="5"
-                                               oninput="scalarOutput.value = scalar.value">
-            <output id="scalarOutput" for="scalar">5</output>
-        </p>
-    <hr>
-    <h2>Inline Semantics</h2>
-        <p><strong>abbr — abbreviation with expanded title</strong></p>
-        <p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.</p>
-
-        <p><strong>dfn — the defining instance of a term</strong></p>
-        <p>A <dfn>linear map</dfn> is a function that preserves vector addition and scalar multiplication.</p>
-
-        <p><strong>cite — title of a referenced work</strong></p>
-        <p>The proof appears in <cite>Linear Algebra Done Right</cite> by Sheldon Axler.</p>
-
-        <p><strong>q — inline quote</strong></p>
-        <p>Axler writes, <q cite="https://linear.axler.net/">every subspace is a vector space</q>.</p>
-    <hr>
-    <h2>Typographic Oddities</h2>
-
-        <p><strong>wbr — word break opportunity</strong></p>
-        <p>This long term eigen<wbr>decomposition can break after "eigen" on narrow screens.</p>
-
-        <p><strong>bdi — bidirectional isolation</strong></p>
-        <p>Top contributor: <bdi>מרים</bdi> — her name's direction is isolated from surrounding text.</p>
-
-        <p><strong>bdo — bidirectional override</strong></p>
-        <p><bdo dir="rtl">This text is forced right to left</bdo></p>
-
-        <p><strong>ruby, rt, rp — ruby annotation</strong></p>
-        <p>
-            <ruby>漢<rp>(</rp><rt>kan</rt><rp>)</rp></ruby>
-            <ruby>字<rp>(</rp><rt>ji</rt><rp>)</rp></ruby>
-            — shows pronunciation above characters.
-        </p>
-
-        <p><strong>span — generic inline wrapper</strong></p>
-        <p>The word <span style="color: hotpink;">mathematics</span> is wrapped in a span for styling.</p>
+    <p>
+        It is also <s>sometimes assumed that all vector spaces are
+        finite-dimensional</s> — infinite-dimensional spaces like function spaces
+        are common in analysis.
+    </p>
 
     <hr>
 
-    <h2>Deprecated</h2>
+    <h2>Chapter 3: Computational Notes</h2>
 
-    <p><strong>acronym — deprecated, use abbr instead</strong></p>
+    <h3>3.1 Python Representation</h3>
+
+    <p>
+        In Python, a vector in ℝ<sup>3</sup> can be represented as a list.
+        The expression <code>v = [1, 2, 3]</code> defines a simple vector.
+        For matrix operations, <code>import numpy as np</code> and use
+        <code>np.linalg.matrix_rank(A)</code> to check rank.
+    </p>
+
+    <p>
+        To run a cell in Jupyter, press <kbd>Shift</kbd> + <kbd>Enter</kbd>.
+        To restart the kernel, press <kbd>Ctrl</kbd> + <kbd>F5</kbd>.
+        A typical output after computing a row echelon form looks like:
+    </p>
+
+    <samp>
+        array([[1., 0., 0.],
+        [0., 1., 0.],
+        [0., 0., 1.]])
+    </samp>
+
+    <p> this is the identity matrix: </p>
+    <pre>
+        | 1 0 0 |
+        | 0 1 0 |
+        | 0 0 1 |
+    </pre>
+
+    <p>
+        This is the <data value="3">3 × 3</data> identity matrix, confirming
+        the three vectors are linearly independent.
+    </p>
+
+    <h3>3.2 Scalar Slider Demo</h3>
+    <p>
+        Adjust <var>c</var> to see scalars for scalar multiplication:
+    </p>
+    <p>
+        <label for="scalar">c =</label>
+        <input type="range" id="scalar" min="0" max="10" value="1"
+               oninput="scalarOutput.value = scalar.value">
+        <output id="scalarOutput" for="scalar">1</output>
+    </p>
+
+    <hr>
+
+    <h2>Chapter 4: Terminology and Language Notes</h2>
+
+    <h3>4.1 Etymology</h3>
+
+    <p>
+        The term <i>eigenvalue</i> comes from the German
+        <span lang="de">Eigenwert</span>, meaning "characteristic value."
+        Do <u>not</u> confuse eigenvalues with eigenvectors — they are related
+        but distinct objects. The equation is <var>T</var>(<var>v</var>) =
+        <var>λ</var><var>v</var>, where <var>λ</var> is the eigenvalue and
+        <var>v</var> is the eigenvector.
+    </p>
+
+    <p>
+        The word eigen<wbr>decomposition is sometimes hyphenated on narrow
+        screens but refers to a single concept.
+    </p>
+
+    <p>
+        In Japanese mathematics, the concept of a
+        <ruby>固有値<rp>(</rp><rt>eigenvalue</rt><rp>)</rp></ruby>
+        is written with kanji that literally translate to "characteristic value,"
+        consistent with the German origin.
+    </p>
+
+    <h3>4.2 Notes Contributors</h3>
+    <p>These notes were reviewed by the following study group members:</p>
+    <ul>
+        <li>Eden</li>
+        <li><bdi>מרים</bdi></li>
+        <li><bdi>王芳</bdi></li>
+    </ul>
+    <small> these are made up :) </small>
+
+    <p>
+        <bdo dir="rtl">سبحان الله</bdo>
+        — an Arabic phrase included to demonstrate right-to-left text override.
+    </p>
+
+    <hr>
+
+    <h3>Contact</h3>
+    <address>
+        Eden Tripp<br>
+        University of San Diego<br>
+        5998 Alcalá Park, San Diego, CA 92110<br>
+        <a href="mailto:edentripp@sandiego.edu">edentripp@sandiego.edu</a>
+    </address>
+    <small> not my real address! </small>
+
+    <hr>
+
+    <h2>Deprecated Syntax Note</h2>
     <!-- DEPRECATED: acronym was removed in HTML5, use abbr with title attribute instead
-        the page will not validate correctly, but it was listed in the requirements -->
-    <p><acronym title="HyperText Markup Language">HTML</acronym> — this is deprecated syntax. Use <abbr title="HyperText Markup Language">HTML</abbr> instead.</p>
+        page will not validate clean, but it is required -->
+    <p>
+        Older HTML used <acronym title="Linear Algebra">LA</acronym> to mark
+        acronyms. This element is deprecated — use
+        <abbr title="Linear Algebra">LA</abbr> instead, which works for both
+        abbreviations and acronyms.
+    </p>
 
     <hr>
+
 </main>
 <footer>
-    <p style = "color: hotpink;">&copy; Made by Eden 2026</p>
+    <p style="color: hotpink;">&copy; Made by Eden 2026</p>
 </footer>
 </body>
+</html>
