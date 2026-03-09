@@ -3,122 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A showcase of HTML media elements including images, audio, video, and embedding.">
+    <meta name="description" content="About Eden — photos, videos, and media showcasing life, travel, and interests.">
     <title>Media — HTML Kitchen Sink</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="text.html">Text</a>
-            <a href="media.html">Media</a>
-            <a href="tables.html">Tables</a>
-            <a href="forms.html">Forms</a>
-            <a href="structure.html">Structure</a>
-            <a href="deprecated.html">Deprecated</a>
-            <a href="experiments.html">Experimental</a>
-        </nav>
-    </header>
-    <main>
-        <h1>HTML Media Elements — Showcase</h1>
-        <p>This page demonstrates every HTML media and embedding element.</p>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="text.html">Text</a>
+        <a href="media.html">Media</a>
+        <a href="tables.html">Tables</a>
+        <a href="forms.html">Forms</a>
+        <a href="structure.html">Structure</a>
+        <a href="deprecated.html">Deprecated</a>
+        <a href="experiments.html">Experimental</a>
+    </nav>
+</header>
+<main>
 
-        <hr>
+    <h1>About Me</h1>
+    <p>I am Eden — a math major at USD with a love for travel, my cat, and
+        finding the perfect background music to study to. This page is built using
+        every HTML media element.</p>
 
-        <h2>Images</h2>
+    <hr>
 
-        <p><strong>img — basic image</strong></p>
-        <img src="assets/tica.JPG" alt="Cat photo" width="1242" height="1048">
+    <h2>Me</h2>
 
-        <p><strong>figure and figcaption — image with caption</strong></p>
-        <figure>
-            <img src="assets/plane.jpg" alt="Photo of a plane" width="3024" height="2024">
-            <figcaption>A plane photo used to demonstrate the figure and figcaption elements.</figcaption>
-        </figure>
+    <figure>
+        <img src="assets/me.jpg" alt="A photo of Eden" width="400" height="300">
+        <figcaption>Me, somewhere I would rather be than doing homework.</figcaption>
+    </figure>
 
-        <p><strong>picture — serve modern formats with fallback</strong></p>
-        <picture>
-            <source srcset="assets/me.jpg" type="image/webp">
-            <source srcset="assets/me.jpg" type="image/jpeg">
-            <img src="assets/me.jpg" alt="Personal photo, served in the best format the browser supports">
-        </picture>
+    <p>
+        If you want to find me, I am probably at a desk with too many tabs open,
+        a cat nearby, and a lo-fi playlist running in the background.
+    </p>
 
-        <p><strong>map and area — clickable image map</strong></p>
-        <img src="assets/eden-tripp.png" alt="Eden Tripp collage" usemap="#photo-map" width="400" height="300">
-        <map name="photo-map">
-            <area shape="rect" coords="0,0,200,150" href="index.html" alt="Top left region">
-            <area shape="rect" coords="200,150,400,300" href="text.html" alt="Bottom right region">
-        </map>
-        <hr>
-        <h2>Audio</h2>
+    <hr>
 
-        <p><strong>audio — embedded audio player</strong></p>
-        <audio controls loop muted>
-            <source src="assets/audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <h2>My Cat</h2>
 
-        <hr>
+    <picture>
+        <!-- serve WebP to browsers that support it, fall back to JPEG -->
+        <source srcset="assets/tica.jpg" type="image/webp">
+        <source srcset="assets/tica.JPG" type="image/jpeg">
+        <img src="assets/tica.JPG" alt="Tica the cat" width="400" height="300">
+    </picture>
 
-        <h2>Video</h2>
+    <p>
+        This is Tica. She has strong opinions about where she sits and zero
+        respect for open textbooks.
+    </p>
 
-        <p><strong>video — embedded video player with captions</strong></p>
-        <video controls width="400" poster="assets/planetwo.jpg">
-            <source src="assets/video.mp4" type="video/mp4">
-            <track src="assets/captions.vtt" kind="captions" srclang="en" label="English">
-            Your browser does not support the video element.
-        </video>
+    <!-- image map — click different parts of the photo -->
+    <p>Click different parts of the photo:</p>
+    <img src="assets/tica.JPG" alt="Tica the cat" usemap="#tica-map" width="400" height="300">
+    <map name="tica-map">
+        <area shape="rect" coords="0,0,200,150" href="index.html" alt="Top left — go home">
+        <area shape="rect" coords="200,150,400,300" href="text.html" alt="Bottom right — go to text page">
+    </map>
 
-        <hr>
+    <hr>
 
-        <h2>Embedding</h2>
+    <h2>Travel</h2>
 
-        <p><strong>iframe — embed external content</strong></p>
-        <iframe width="400" height="225"
-                src="https://www.youtube.com/embed/XkcNhVQ-cjo"
-                title="YouTube video"
-                allowfullscreen>
-        </iframe>
+    <figure>
+        <img src="assets/plane.jpg" alt="View from a plane window" width="400" height="300">
+        <figcaption>One of many plane windows. I find flying genuinely peaceful.</figcaption>
+    </figure>
 
-        <p><strong>embed — embed external resource</strong></p>
-        <embed src="assets/2628488ProblemA.pdf" type="application/pdf" width="400" height="500">
+    <video controls width="400" poster="assets/plane.jpg">
+        <source src="assets/video.mp4" type="video/mp4">
+        <track src="assets/captions.vtt" kind="captions" srclang="en" label="English">
+        Your browser does not support the video element.
+    </video>
+    <p>Don't let this video trick you! It is actually me smelling a flower!</p>
 
-        <p><strong>object and param — embed with parameters</strong></p>
-        <object data="assets/2628488ProblemA.pdf" type="application/pdf" width="400" height="500">
-            <!-- param is obsolete in HTML5 — the validator flags it.
-                 The data attribute on object replaces its function.
-                 Included here for demonstration purposes only. -->
-            <param name="src" value="assets/2628488ProblemA.pdf">
-            <p>Your browser cannot display this PDF. <a href="assets/2628488ProblemA.pdf">Download it instead.</a></p>
-        </object>
-        <hr>
+    <hr>
 
-        <h2>Canvas & SVG</h2>
+    <h2>Math Modeling Competition</h2>
 
-        <p><strong>canvas — drawn with JavaScript</strong></p>
-        <canvas id="demo-canvas" width="300" height="150"
-                style="border: 1px solid #ccc;">
-        </canvas>
-        <script>
-            const canvas = document.getElementById('demo-canvas');
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'hotpink';
-            ctx.fillRect(20, 20, 100, 80);
-            ctx.fillStyle = 'darkslateblue';
-            ctx.fillRect(140, 40, 80, 80);
-        </script>
+    <p>
+        I participated in a math modeling competition where teams are given a
+        real-world problem and 96 hours to build and present a mathematical model.
+        Below is one of the problem sets from that experience.
+    </p>
 
-        <p><strong>svg — inline scalable vector graphic</strong></p>
-        <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="40" fill="hotpink"/>
-            <rect x="110" y="10" width="80" height="80" fill="darkslateblue"/>
-        </svg>
+    <embed src="assets/2628488ProblemA.pdf" type="application/pdf" width="400" height="500">
 
-        <hr>
-    </main>
-    <footer>
-        <p style = "color: hotpink;">&copy; Made by Eden 2026</p>
-    </footer>
+    <object data="assets/2628488ProblemA.pdf" type="application/pdf" width="400" height="500">
+        <!-- param is obsolete in HTML5 — included for demonstration only -->
+        <param name="src" value="assets/2628488ProblemA.pdf">
+        <p>Your browser cannot display this PDF.
+            <a href="assets/2628488ProblemA.pdf">Download it instead.</a></p>
+    </object>
+
+    <hr>
+
+    <h2>Background Music</h2>
+
+    <p>
+        I study best with ambient background music. Here is a calming playlist
+        I have on rotation, plus a local audio sample.
+    </p>
+
+    <iframe width="400" height="225"
+            src="https://www.youtube.com/embed/XkcNhVQ-cjo"
+            title="Calming background music for studying"
+            allowfullscreen>
+    </iframe>
+
+    <p>One time for an anthropology class one of my best friend's and I had to make a podcast, this is it!:</p>
+    <audio controls loop muted>
+        <source src="assets/audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr>
+
+    <h2>Canvas & SVG</h2>
+
+    <p>A small canvas drawing and inline SVG...just because HTML can do this lol.</p>
+
+    <canvas id="demo-canvas" width="300" height="150"
+            style="border: 1px solid #ccc;">
+    </canvas>
+    <script>
+        const canvas = document.getElementById('demo-canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'hotpink';
+        ctx.fillRect(20, 20, 100, 80);
+        ctx.fillStyle = 'darkslateblue';
+        ctx.fillRect(140, 40, 80, 80);
+    </script>
+
+    <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" fill="hotpink"/>
+        <rect x="110" y="10" width="80" height="80" fill="darkslateblue"/>
+    </svg>
+
+    <hr>
+
+</main>
+<footer>
+    <p style="color: hotpink;">&copy; Made by Eden 2026</p>
+</footer>
 </body>
 </html>
