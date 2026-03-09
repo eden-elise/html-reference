@@ -1,158 +1,176 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="HTML table elements demonstrated">
-            <title>HTML table elements demo</title>
-            <link rel="stylesheet" href="styles.css">
-        </head>
-        <body>
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="text.html">Text</a>
-                <a href="media.html">Media</a>
-                <a href="tables.html">Tables</a>
-                <a href="forms.html">Forms</a>
-                <a href="structure.html">Structure</a>
-                <a href="deprecated.html">Deprecated</a>
-                <a href="experiments.html">Experimental</a>
-            </nav>
-        </header>
-        <main>
-            <h1>HTML table elements demo</h1>
-            <h2>Table 1: HTML Elements</h2>
-            <table>
-                <caption>A reference of HTML elements by category</caption>
-                <colgroup>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th scope="col" id="cat">Category</th>
-                        <th scope="col" id="elem">Element</th>
-                        <th scope="col" id="desc">Description</th>
-                        <th scope="col" id="type">Block or Inline</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td headers="cat">Text</td>
-                    <td headers="elem"><code>&lt;p&gt;</code></td>
-                    <td headers="desc">Paragraph of text</td>
-                    <td headers="type">Block</td>
-                </tr>
-                <tr>
-                    <td headers="cat">Text</td>
-                    <td headers="elem"><code>&lt;em&gt;</code></td>
-                    <td headers="desc">Stress emphasis</td>
-                    <td headers="type">Inline</td>
-                </tr>
-                <tr>
-                    <td headers="cat">Text</td>
-                    <td headers="elem"><code>&lt;strong&gt;</code></td>
-                    <td headers="desc">Strong importance</td>
-                    <td headers="type">Inline</td>
-                </tr>
-                <tr>
-                    <td headers="cat">Structure</td>
-                    <td headers="elem"><code>&lt;section&gt;</code></td>
-                    <td headers="desc">Thematic grouping of content</td>
-                    <td headers="type">Block</td>
-                </tr>
-                <tr>
-                    <td headers="cat">Structure</td>
-                    <td headers="elem"><code>&lt;article&gt;</code></td>
-                    <td headers="desc">Self-contained content</td>
-                    <td headers="type">Block</td>
-                </tr>
-                <tr>
-                    <td headers="cat">Media</td>
-                    <td headers="elem"><code>&lt;img&gt;</code></td>
-                    <td headers="desc">Embeds an image</td>
-                    <td headers="type">Inline</td>
-                </tr>
-                <tr>
-                    <td headers="cat">Media</td>
-                    <td headers="elem"><code>&lt;video&gt;</code></td>
-                    <td headers="desc">Embeds a video player</td>
-                    <td headers="type">Block</td>
-                </tr>
-                <tr>
-                    <td headers="cat">Forms</td>
-                    <td headers="elem"><code>&lt;input&gt;</code></td>
-                    <td headers="desc">Interactive input field</td>
-                    <td headers="type">Inline</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="4">Source: Class</td>
-                </tr>
-                </tfoot>
-            </table>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML table elements demonstrated through a real course schedule.">
+    <title>Tables — HTML Kitchen Sink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/heart.png">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="text.html">Text</a>
+        <a href="media.html">Media</a>
+        <a href="tables.html">Tables</a>
+        <a href="forms.html">Forms</a>
+        <a href="structure.html">Structure</a>
+        <a href="deprecated.html">Deprecated</a>
+        <a href="experiments.html">Experimental</a>
+    </nav>
+</header>
+<main>
 
-            <h2>Table 2: HTML Page Structure</h2>
-            <p>This table uses colspan and rowspan to show how HTML elements nest within a page.</p>
+    <h1>Tables</h1>
 
-            <table>
-                <caption>HTML document structure with nested regions</caption>
-                <thead>
-                    <tr>
-                        <!-- table headers -->
-                        <th scope="col" id="region">Region</th>
-                        <th scope="col" id="element">Element</th>
-                        <th scope="col" id="role">Role</th>
-                        <th scope="col" id="required">Required</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td headers="region" rowspan="2">Head</td>
-                        <td headers="element"><code>&lt;title&gt;</code></td>
-                        <td headers="role">Page title shown in browser tab</td>
-                        <td headers="required">Yes</td>
-                    </tr>
-                    <tr>
-                        <td headers="element"><code>&lt;meta&gt;</code></td>
-                        <td headers="role">Metadata about the document</td>
-                        <td headers="required">Recommended</td>
-                    </tr>
-                    <tr>
-                        <td headers="region" rowspan="3">Body</td>
-                        <td headers="element"><code>&lt;header&gt;</code></td>
-                        <td headers="role">Introductory content or nav</td>
-                        <td headers="required">No</td>
-                    </tr>
-                    <tr>
-                        <td headers="element"><code>&lt;main&gt;</code></td>
-                        <td headers="role">Primary page content</td>
-                        <td headers="required">Recommended</td>
-                    </tr>
-                    <tr>
-                        <td headers="element"><code>&lt;footer&gt;</code></td>
-                        <td headers="role">Closing content or copyright</td>
-                        <td headers="required">No</td>
-                    </tr>
-                    <tr>
-                        <td headers="region" colspan="2">Both regions</td>
-                        <td headers="role">Can contain <code>&lt;script&gt;</code></td>
-                        <td headers="required">No</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4">Source: Class</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </main>
-        <footer>
-            <p style = "color: hotpink;">&copy; Made by Eden 2026</p>
-        </footer>
-        </body>
-    </html>
+    <h2>Table 1: Course Reference</h2>
+    <table>
+        <caption>Spring 2025 Course Overview</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col" id="course">Course</th>
+            <th scope="col" id="dept">Department</th>
+            <th scope="col" id="desc">Description</th>
+            <th scope="col" id="days">Days</th>
+            <th scope="col" id="time">Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td headers="course">Web Programming</td>
+            <td headers="dept">Computer Science</td>
+            <td headers="desc">HTML, CSS, and JavaScript for the web</td>
+            <td headers="days">Mon / Wed / Fri</td>
+            <td headers="time">9:05 – 10:00</td>
+        </tr>
+        <tr>
+            <td headers="course">Linear Algebra II</td>
+            <td headers="dept">Mathematics</td>
+            <td headers="desc">Axler-based proof course covering linear maps and operators</td>
+            <td headers="days">Mon / Wed / Fri</td>
+            <td headers="time">10:10 – 11:05</td>
+        </tr>
+        <tr>
+            <td headers="course">Geometry</td>
+            <td headers="dept">Mathematics</td>
+            <td headers="desc">Euclidean and non-Euclidean geometry</td>
+            <td headers="days">Mon / Wed / Fri</td>
+            <td headers="time">11:15 – 12:10</td>
+        </tr>
+        <tr>
+            <td headers="course">Quantum Computing</td>
+            <td headers="dept">Physics / CS</td>
+            <td headers="desc">Quantum gates, bra-ket notation, and circuits</td>
+            <td headers="days">Tue / Thu</td>
+            <td headers="time">9:15 – 10:35</td>
+        </tr>
+        <tr>
+            <td headers="course">COMP 310</td>
+            <td headers="dept">Computer Science</td>
+            <td headers="desc">Operating systems and systems programming in C</td>
+            <td headers="days">Mon / Wed (+ Wed lab)</td>
+            <td headers="time">7:00 – 8:20pm (lab: W 4:00 – 5:20pm)</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="5">Spring 2025 — University of San Diego</td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <h2>Table 2: Weekly Schedule</h2>
+    <p>rowspan is used where classes span multiple hour blocks. Quantum Computing
+        and COMP 310 both run 80 minutes, crossing two hour rows.</p>
+
+    <table>
+        <caption>Spring 2025 Weekly Schedule</caption>
+        <thead>
+        <tr>
+            <th scope="col" id="time">Time</th>
+            <th scope="col" id="mon">Monday</th>
+            <th scope="col" id="tue">Tuesday</th>
+            <th scope="col" id="wed">Wednesday</th>
+            <th scope="col" id="thu">Thursday</th>
+            <th scope="col" id="fri">Friday</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row" id="t9">9:00 – 10:00</th>
+            <td headers="t9 mon">Web Programming<br><small>9:05–10:00</small></td>
+            <td headers="t9 tue" rowspan="2">Quantum Computing<br><small>9:15–10:35</small></td>
+            <td headers="t9 wed">Web Programming<br><small>9:05–10:00</small></td>
+            <td headers="t9 thu" rowspan="2">Quantum Computing<br><small>9:15–10:35</small></td>
+            <td headers="t9 fri">Web Programming<br><small>9:05–10:00</small></td>
+        </tr>
+        <tr>
+            <th scope="row" id="t10">10:00 – 11:00</th>
+            <td headers="t10 mon">Linear Algebra II<br><small>10:10–11:05</small></td>
+            <td headers="t10 wed">Linear Algebra II<br><small>10:10–11:05</small></td>
+            <td headers="t10 fri">Linear Algebra II<br><small>10:10–11:05</small></td>
+        </tr>
+        <tr>
+            <th scope="row" id="t11">11:00 – 12:00</th>
+            <td headers="t11 mon">Geometry<br><small>11:15–12:10</small></td>
+            <td headers="t11 tue">—</td>
+            <td headers="t11 wed">Geometry<br><small>11:15–12:10</small></td>
+            <td headers="t11 thu">—</td>
+            <td headers="t11 fri">Geometry<br><small>11:15–12:10</small></td>
+        </tr>
+        <tr>
+            <th scope="row" id="t12">12:00 – 4:00</th>
+            <td headers="t12 mon" colspan="5">—</td>
+        </tr>
+        <tr>
+            <th scope="row" id="t4">4:00 – 5:00</th>
+            <td headers="t4 mon">—</td>
+            <td headers="t4 tue">—</td>
+            <td headers="t4 wed" rowspan="2">COMP 310 Lab<br><small>4:00–5:20</small></td>
+            <td headers="t4 thu">—</td>
+            <td headers="t4 fri">—</td>
+        </tr>
+        <tr>
+            <th scope="row" id="t5">5:00 – 6:00</th>
+            <td headers="t5 mon">—</td>
+            <td headers="t5 tue">—</td>
+            <td headers="t5 thu">—</td>
+            <td headers="t5 fri">—</td>
+        </tr>
+        <tr>
+            <th scope="row" id="t7">7:00 – 8:00</th>
+            <td headers="t7 mon" rowspan="2">COMP 310<br><small>7:00–8:20pm</small></td>
+            <td headers="t7 tue">—</td>
+            <td headers="t7 wed" rowspan="2">COMP 310<br><small>7:00–8:20pm</small></td>
+            <td headers="t7 thu">—</td>
+            <td headers="t7 fri">—</td>
+        </tr>
+        <tr>
+            <th scope="row" id="t8">8:00 – 9:00</th>
+            <td headers="t8 tue">—</td>
+            <td headers="t8 thu">—</td>
+            <td headers="t8 fri">—</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="6">Spring 2025 — University of San Diego</td>
+        </tr>
+        </tfoot>
+    </table>
+
+</main>
+<footer>
+    <p style="color: hotpink;">&copy; Made by Eden 2026</p>
+</footer>
+</body>
+</html>
