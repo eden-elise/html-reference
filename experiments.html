@@ -6,6 +6,12 @@
     <meta name="description" content="HTML experiments pushing the limits of the spec.">
     <title>Experiments — HTML Kitchen Sink</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #🌸 { color: orange; font-weight: bold; }
+        #🦋 { color: gray; text-decoration: line-through; }
+        #🌿 { background: lavender; padding: 0.5rem; }
+    </style>
 </head>
 <body>
 <header>
@@ -155,6 +161,60 @@
         Any UI that required this would be unusable.</p>
 
     <hr>
+    <h2>Experiment 2: Emoji as an id Attribute</h2>
+
+    <p><strong>Hypothesis:</strong> The HTML spec says id can be any string that
+        does not contain spaces. That technically includes emoji. I expect the element
+        to render fine but CSS and JavaScript targeting it will probably break or
+        require weird escaping.</p>
+
+    <p id="🌸">This paragraph has id="🌸"</p>
+    <p id="🦋">This paragraph has id="🦋"</p>
+    <p id="🌿">This paragraph has id="🌿"</p>
+
+    <script>
+        const flower = document.getElementById('🌸');
+        const butterfly = document.getElementById('🦋');
+        const leaf = document.getElementById('🌿');
+
+        console.log('🌸 element found by JS:', flower);
+        console.log('🦋 element found by JS:', butterfly);
+        console.log('🌿 element found by JS:', leaf);
+
+        if (flower) flower.textContent += ' — JavaScript found me!';
+        if (butterfly) butterfly.textContent += ' — JavaScript found me!';
+        if (leaf) leaf.textContent += ' — JavaScript found me!';
+    </script>
+
+    <p><strong>Finding:</strong> I kind of thought this wasn't going to work but it actually worked
+    all the CS and JavaScript was able to locate and use them as normal id's. The code also validates fine.</p>
+
+    <hr>
+    <h2>Experiment 3: &lt;div&gt; Inside a &lt;p&gt;</h2>
+
+    <p><strong>Hypothesis:</strong> A div inside a p is invalid because p only allows
+        inline content. I expect the browser to either ignore the div or throw a visible
+        error. I do not expect it to silently rewrite my HTML.</p>
+
+    <p>This paragraph starts normally, then a div appears:
+    <div style="background: hotpink; padding: 1rem;">
+        I am a div inside a p. I should not exist here.
+        <div style="background: lavender; padding: 1rem;">
+            I am a div inside a div inside a p. This is getting weird.
+            <div style="background: lightgreen; padding: 1rem;">
+                I am a div inside a div inside a div inside a p.
+                What does the DOM actually look like right now?
+            </div>
+        </div>
+    </div>
+    This text tries to continue the paragraph after the div. Is it still inside the p?
+    </p>
+
+    <p><strong>Finding:</strong> The browser rewrote the HTML without any
+        error or warning. It auto-closed the p tag right before the div, rendered the
+        divs as siblings, then the text that tried to continue the paragraph after the
+        div, but it had no parent element wrapping it at all. This caused a silent structural
+        changes that were only visible if I looked in dev tools. </p>
 
 </main>
 <footer>
