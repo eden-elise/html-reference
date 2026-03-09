@@ -17,7 +17,7 @@ A kitchen sink reference site for HTML elements, built as a course assignment. E
 3. div inside p — documented silent browser error recovery behavior
 
 ## llm use
-Used Claude to help generate content and structure for each page. All findings in experiments.html are my own observations from actually running the code in the browser.
+Used Claude to help generate structure for each page after index as it is similar for every page.  
 
 ## committing practice
 Format: `<type>(<optional scope>): <description>`
