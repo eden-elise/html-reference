@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deprecated and obsolete HTML elements demonstrated with explanations.">
+    <title>Deprecated — HTML Kitchen Sink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="text.html">Text</a>
+        <a href="media.html">Media</a>
+        <a href="tables.html">Tables</a>
+        <a href="forms.html">Forms</a>
+        <a href="structure.html">Structure</a>
+        <a href="deprecated.html">Deprecated</a>
+        <a href="experiments.html">Experimental</a>
+    </nav>
+</header>
+<main>
+    <h1>Deprecated HTML Elements</h1>
+    <p>These elements are obsolete in HTML5. Browsers may still render them but they
+        should never be used in modern code. Each entry notes what to use instead.</p>
+
+    <!-- NOTE: This page intentionally does not fully validate. -->
+    <!-- Validator-flagged elements are noted in comments below. -->
+
+    <hr>
+
+    <!-- FLAG: font is obsolete -->
+    <p><strong>font — styling belongs in CSS</strong></p>
+    <!-- What it did: set font face, size, and color directly on an element -->
+    <!-- Use instead: CSS font-family, font-size, color properties -->
+    <font color="hotpink" face="Georgia" size="4">This text uses the deprecated font element.</font>
+
+    <hr>
+
+    <!-- FLAG: center is obsolete -->
+    <p><strong>center — use CSS text-align or flexbox</strong></p>
+    <!-- What it did: centered block-level content horizontally -->
+    <!-- Use instead: CSS text-align: center or display: flex with justify-content: center -->
+    <center>This text is centered using the deprecated center element.</center>
+
+    <hr>
+
+    <!-- FLAG: big is obsolete -->
+    <p><strong>big — use CSS font-size</strong></p>
+    <!-- What it did: increased text size by one level -->
+    <!-- Use instead: CSS font-size -->
+    <big>This text uses the deprecated big element.</big>
+
+    <hr>
+
+    <p><strong>small — still valid, included for contrast with big</strong></p>
+    <!-- small is valid for fine print, legal text, side comments -->
+    <small>This text uses the valid small element.</small>
+
+    <hr>
+
+    <!-- FLAG: tt is obsolete -->
+    <p><strong>tt — teletype text, use code instead</strong></p>
+    <!-- What it did: rendered text in a monospace font, mimicking a teletype machine -->
+    <!-- Use instead more semantically meaning full elements:
+         code for code snippets, kbd for keyboard input, samp for output -->
+    <tt>This text uses the deprecated tt element.</tt>
+
+    <hr>
+
+    <!-- FLAG: strike is obsolete -->
+    <p><strong>strike — use s or del instead</strong></p>
+    <!-- What it did: rendered strikethrough text with no semantic meaning -->
+    <!-- Use instead: s for no-longer-accurate content, del for tracked deletions -->
+    <strike>This text uses the deprecated strike element.</strike>
+
+    <hr>
+
+    <!-- FLAG: acronym is obsolete -->
+    <p><strong>acronym — use abbr instead</strong></p>
+    <!-- What it did: marked acronyms with an optional title expansion -->
+    <!-- Use instead: abbr with a title attribute works for both abbreviations and acronyms -->
+    <p><acronym title="HyperText Markup Language">HTML</acronym> — deprecated.
+    Use <abbr title="HyperText Markup Language">HTML</abbr> instead.</p>
+
+    <hr>
+
+    <!-- FLAG: bgsound is non-standard -->
+    <p><strong>bgsound — IE-only background sound</strong></p>
+    <!-- What it did: played background audio automatically in Internet Explorer only -->
+    <!-- Use instead: audio element -->
+    <!-- Does it still work? Only in old IE, no modern browser supports it -->
+    <bgsound src="assets/audio.mp3"></bgsound>
+
+    <hr>
+
+    <!-- VALIDATOR WILL FLAG: blink is non-standard -->
+    <p><strong>blink — blinking text, a relic of early web design</strong></p>
+    <!-- What it did: made text blink on and off, widely not good for accessibility -->
+    <!-- Use instead: CSS animation -->
+    <!-- It is removed from all modern browsers -->
+    <blink>This text would blink in very old browsers. It no longer works.</blink>
+
+    <hr>
+
+    <!-- VALIDATOR WILL FLAG: marquee is obsolete -->
+    <p><strong>marquee — scrolling text</strong></p>
+    <!-- What it did: made text scroll horizontally across the page automatically -->
+    <!-- Use instead: CSS animation -->
+    <!-- Does it still work? yes in most browsers -->
+    <marquee>This text scrolls across the page using the deprecated marquee element.</marquee>
+
+    <hr>
+
+</main>
+<footer>
+    <p style="color: hotpink;">&copy; Made by Eden 2026</p>
+</footer>
+</body>
+</html>
