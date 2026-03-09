@@ -24,9 +24,6 @@
         <base href="https://eden-elise.github.io/html-reference/">
         -->
         <script defer src="main.js"></script>
-        <noscript>
-            <p>This page works best with JavaScript enabled.</p>
-        </noscript>
         <style>
             h1 {
                 color: darkslateblue;
@@ -34,7 +31,7 @@
             }
         </style>
     </head>
-    <body role="document">
+    <body>
         <header>
             <h1>HTML Kitchen Sink</h1>
             <nav>
@@ -46,6 +43,8 @@
                 <a href="deprecated.html">Deprecated</a>
                 <a href="experiments.html">Experimental</a>
             </nav>
+            <!-- had to go in body because text in the noscript-->
+            <noscript>This page works best with JavaScript enabled.</noscript>
         </header>
         <main>
             <p>Welcome to my HTML kitchen sink page</p>
